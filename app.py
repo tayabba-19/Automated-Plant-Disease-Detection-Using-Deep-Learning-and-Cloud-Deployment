@@ -36,7 +36,7 @@ download_file(JSON_URL, "class_names.json")
 def load_model():
     try:
         return tf.keras.models.load_model("plant_scan.h5")
-        except Exception as e:
+    except Exception as e:
         st.error(f"Failed to load model: {e}")
         return None
 
