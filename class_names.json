@@ -1,0 +1,8 @@
+import json
+
+class_indices = train_generator.class_indices
+class_names = {str(v): k for k, v in
+class_indices.items()}
+
+with open("class_names.json", "w") as f:
+   json.dump(class_names, f)
