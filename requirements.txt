@@ -1,5 +1,5 @@
 streamlit
-tensor-flow
+tensorflow==2.13.0
 numpy
 Pillow
 
