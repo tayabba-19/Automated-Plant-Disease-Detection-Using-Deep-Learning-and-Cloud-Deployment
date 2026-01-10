@@ -3,8 +3,8 @@ tensorflow-cpu==2.15.0
 numpy
 pillow
 opencv-python-headless
-scikit-learn
 matplotlib
+gdown
 
 
 
