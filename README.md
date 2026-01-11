@@ -52,6 +52,24 @@ This project is an **automated system** to detect tomato leaf diseases using **D
 - Helps **understand why the model predicted a certain disease**.  
 - Due to deployment simplicity, **Grad-CAM outputs are included in the report**, not in the live Streamlit app.
 
+- Grad-CAM (Gradient-weighted Class Activation Mapping) is used to make the deep learning model explainable.
+
+### Purpose of Grad-CAM
+- To understand which regions of the leaf image influence the model’s prediction
+- To validate whether the model focuses on diseased areas
+- To improve trust and transparency in predictions
+
+### Implementation in This Project
+- Grad-CAM is implemented and demonstrated in the Colab notebook:
+  `training_with_gradcam.ipynb`
+- It highlights the important regions of the leaf contributing to disease classification.
+- Due to deployment simplicity and performance considerations, Grad-CAM is demonstrated only in Colab,
+  not in the Streamlit app.
+
+Viva Explanation:
+Grad-CAM is used in Colab for explainability, while the Streamlit app is used for prediction,
+confidence score, and recommendations.
+
 ---
 
 ## 5. Streamlit App (Deployment)
@@ -88,4 +106,4 @@ This project is an **automated system** to detect tomato leaf diseases using **D
 
 ## 7. Folder Structure
 
-Automated-Plant-Disease-Detection/ │ ├── app.py                          # Streamlit app ├── requirements.txt                # Dependencies ├── training_with_gradcam.ipynb     # Colab notebook with Grad-CAM ├── plant_disease_old.ipynb         # Old notebook (optional) ├── README.md                        # Project documentation
+Automated-Plant-Disease-Detection/ │ ├── app.py                          # Streamlit app ├── requirements.txt                # Dependencies ├── training_with_gradcam.ipynb       # project.ipynb ├── README.md                        # Project documentation
