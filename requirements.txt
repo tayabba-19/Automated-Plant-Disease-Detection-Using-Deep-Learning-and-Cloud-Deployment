@@ -1,10 +1,11 @@
-streamlit==1.29.0
+streamlit
+tensorflow-cpu
 numpy
 pillow
-opencv-python-headless
+opencv-python
 matplotlib
-gdown
-keras
+scikit-learn
+
 
 
 
