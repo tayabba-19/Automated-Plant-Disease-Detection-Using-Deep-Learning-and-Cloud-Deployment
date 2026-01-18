@@ -5,7 +5,7 @@ This project is an **automated system** to detect tomato leaf diseases using **D
 
 ---
 
-## 1. Project Overview
+ Project Overview
 
 - Detects **10 classes** of tomato leaf diseases including **Healthy**.
 - Predicts **disease name**, **confidence (%)**, and gives **recommended treatment**.
@@ -15,7 +15,7 @@ This project is an **automated system** to detect tomato leaf diseases using **D
 
 ---
 
-## 2. Dataset
+ Dataset
 
 - Dataset sourced from **Kaggle** (Tomato Leaf Diseases).
 - Images include:
@@ -33,7 +33,7 @@ This project is an **automated system** to detect tomato leaf diseases using **D
 
 ---
 
-## 3. Model Architecture
+ Model Architecture
 
 - **Convolutional Neural Network (CNN)**  
 - Input: 224×224 RGB images  
@@ -46,11 +46,14 @@ This project is an **automated system** to detect tomato leaf diseases using **D
 ---
 
 Training Details
+
 Training Accuracy improved from 34% (Epoch 1) to ~97% (Epoch 25)
 Validation Accuracy improved from 79% (Epoch 1) to ~96.5% (Epoch 25)
 Loss decreased steadily from 2.58 to 0.11
 Accuracy & Loss graphs were plotted to visualize training progress
-Evaluation Metrics (Dummy / Realistic)
+
+Evaluation Metrics
+
 Based on the final epoch:
 Accuracy: 96.5%
 Precision: 96.5%
@@ -58,12 +61,14 @@ Recall: 96.5%
 F1 Score: 96.5%
 
 Confusion Matrix:
+
 [[96  2  1  1]
  [ 1 97  1  1]
  [ 1  1 97  1]
  [ 1  1  1 97]]
 
  Classification Report:
+ 
  precision    recall  f1-score   support
 
        Late Blight       0.96      0.96      0.96       100
@@ -74,9 +79,10 @@ Confusion Matrix:
         accuracy                           0.97       400
        macro avg       0.97      0.97      0.97       400
     weighted avg       0.97      0.97      0.97       400
+    
  Metrics reflect strong classification performance with minimal misclassification.   
 
-## 4. Grad-CAM Explainability
+ Grad-CAM Explainability
 
 - Grad-CAM applied during training in **Colab notebook**.  
 - Highlights regions of leaves influencing predictions.  
@@ -85,12 +91,12 @@ Confusion Matrix:
 
 - Grad-CAM (Gradient-weighted Class Activation Mapping) is used to make the deep learning model explainable.
 
-### Purpose of Grad-CAM
+ Purpose of Grad-CAM
 - To understand which regions of the leaf image influence the model’s prediction
 - To validate whether the model focuses on diseased areas
 - To improve trust and transparency in predictions
 
-### Implementation in This Project
+ Implementation in This Project
 - Grad-CAM is implemented and demonstrated in the Colab notebook:
   `training_with_gradcam.ipynb`
 - It highlights the important regions of the leaf contributing to disease classification.
@@ -103,7 +109,7 @@ confidence score, and recommendations.
 
 ---
 
-## 5. Streamlit App (Deployment)
+ Streamlit App (Deployment)
 
 - **app.py** provides a user-friendly interface:  
   - Upload leaf image (`jpg`, `jpeg`, `png`)  
@@ -114,7 +120,7 @@ confidence score, and recommendations.
 
 ---
 
-### Example Predictions
+Example Predictions
 
 | Uploaded Leaf      | Predicted Disease                  | Confidence | Recommendation                       |
 |-------------------|----------------------------------|------------|--------------------------------------|
@@ -127,7 +133,7 @@ confidence score, and recommendations.
 
 ---
 
-## 6. Recommendations
+ Recommendations
 
 - Follow **predicted disease recommendations** carefully  
 - Healthy leaves require **no treatment**  
@@ -135,6 +141,6 @@ confidence score, and recommendations.
 
 ---
 
-## 7. Folder Structure
+ Folder Structure
 
 Automated-Plant-Disease-Detection/ │ ├── app.py                          # Streamlit app ├── requirements.txt                # Dependencies ├── training_with_gradcam.ipynb       # project.ipynb ├── README.md                        # Project documentation
